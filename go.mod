@@ -27,3 +27,5 @@ require (
 	golang.org/x/sys v0.0.0-20190310054646-10058d7d4faa
 	google.golang.org/genproto v0.0.0-20180831171423-11092d34479b // indirect
 )
+
+go 1.13
