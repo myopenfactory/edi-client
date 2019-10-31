@@ -48,12 +48,12 @@ func provideLogOptions() []log.Option {
 
 	logSyslog := viper.GetString("log.syslog")
 	if logSyslog != "" {
-		log.WithSyslog(logSyslog)
+		opts = append(opts, log.WithSyslog(logSyslog))
 	}
 
 	eventLog := viper.GetString("log.eventlog")
 	if eventLog != "" {
-		log.WithEventlog(eventLog)
+		opts = append(opts, log.WithEventlog(eventLog))
 	}
 
 	logMailHost := viper.GetString("log.mail.host")
@@ -63,12 +63,12 @@ func provideLogOptions() []log.Option {
 		logMailTo := viper.GetString("log.mail.to")
 		logMailUsername := viper.GetString("log.mail.username")
 		logMailPassword := viper.GetString("log.mail.password")
-		log.WithMail("myOpenFactory Client", addr, logMailFrom, logMailTo, logMailUsername, logMailPassword)
+		opts = append(opts, log.WithMail("myOpenFactory Client", addr, logMailFrom, logMailTo, logMailUsername, logMailPassword))
 	}
 
 	logFolder := viper.GetString("log.folder")
 	if logFolder != "" {
-		log.WithFilesystem(logFolder)
+		opts = append(opts, log.WithFilesystem(logFolder))
 	}
 
 	return opts
