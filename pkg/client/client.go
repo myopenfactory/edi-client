@@ -108,19 +108,19 @@ func New(logger *log.Logger, identifier string, options ...Option) (*Client, err
 
 func WithUsername(username string) Option {
 	return func(c *Client) {
-		c.Username = username
+		c.Username = strings.TrimSpace(username)
 	}
 }
 
 func WithPassword(password string) Option {
 	return func(c *Client) {
-		c.Password = password
+		c.Password = strings.TrimSpace(password)
 	}
 }
 
 func WithURL(url string) Option {
 	return func(c *Client) {
-		c.URL = url
+		c.URL = strings.TrimSpace(url)
 	}
 }
 
