@@ -12,9 +12,9 @@ require (
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.15.0
 	github.com/twitchtv/twirp v8.1.3+incompatible
-	golang.org/x/net v0.11.0
-	golang.org/x/sys v0.9.0
-	golang.org/x/text v0.10.0
+	golang.org/x/net v0.15.0
+	golang.org/x/sys v0.12.0
+	golang.org/x/text v0.13.0
 	google.golang.org/protobuf v1.30.0
 )
 
@@ -40,7 +40,7 @@ require (
 	github.com/subosito/gotenv v1.4.2 // indirect
 	github.com/tcnksm/go-gitconfig v0.1.2 // indirect
 	github.com/ulikunitz/xz v0.5.11 // indirect
-	golang.org/x/crypto v0.10.0 // indirect
+	golang.org/x/crypto v0.13.0 // indirect
 	golang.org/x/oauth2 v0.5.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
